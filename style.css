@@ -1,0 +1,30 @@
+:root { --bg: #0B0C0E; --surface: #17191D; --ink: #F2F4F7; --muted: #9AA3AE; --accent: #7CC4EF; --line: #262A30; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); }
+.header { display: flex; align-items: center; justify-content: space-between; max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem; }
+.brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink); font-weight: 700; font-size: 1.2rem; letter-spacing: -.3px; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+.nav a { color: var(--muted); text-decoration: none; margin-left: 1.1rem; font-size: .95rem; }
+.nav a:hover { color: var(--ink); }
+.content { max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+h1 { font-size: 2rem; letter-spacing: -.6px; line-height: 1.2; margin: 1.5rem 0 .4rem; }
+h2 { font-size: 1.2rem; margin: 2.2rem 0 .6rem; letter-spacing: -.2px; }
+h3 { font-size: 1rem; margin: 1.4rem 0 .4rem; }
+p, li { color: #D5DAE1; }
+p { margin: .7rem 0; }
+ul { margin: .6rem 0 .6rem 1.25rem; }
+li { margin: .35rem 0; }
+.updated { color: var(--muted); font-size: .92rem; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.15rem; margin: 1rem 0; }
+table { width: 100%; border-collapse: collapse; margin: .8rem 0; font-size: .95rem; }
+th, td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-bottom: 1px solid var(--line); color: #D5DAE1; }
+th { color: var(--muted); font-weight: 600; }
+.hero { text-align: center; padding: 3.5rem 0 1rem; }
+.hero img { width: 112px; height: 112px; border-radius: 26px; }
+.hero h1 { font-size: 2.4rem; margin-top: 1.4rem; }
+.hero p { color: var(--muted); font-size: 1.1rem; max-width: 34rem; margin: .8rem auto; }
+.pill { display: inline-block; margin-top: 1.2rem; padding: .7rem 1.4rem; border-radius: 999px; background: var(--accent); color: #0B0C0E; font-weight: 700; text-decoration: none; }
+.three { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .9rem; margin-top: 2.5rem; }
+.footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; text-align: center; padding: 1.6rem 1.25rem 2.4rem; }
+.footer a { color: var(--muted); margin: 0 .5rem; }
