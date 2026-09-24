@@ -4,31 +4,371 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PostBud: film your day, Bud makes the video</title>
-<meta name="description" content="PostBud turns the clips you pick into one captioned video for TikTok, Reels and Shorts.">
-<link rel="icon" type="image/png" href="icon.png">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Pick the clips you filmed today. Bud picks the cut, and your phone makes one captioned video for TikTok, Reels and Shorts.">
+<meta name="theme-color" content="#101216">
+<meta property="og:title" content="PostBud: film your day, Bud makes the video">
+<meta property="og:description" content="Pick the clips you filmed today. Bud picks the cut, and your phone makes one captioned video.">
+<meta property="og:image" content="https://postbud.app/icon.png">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="preload" href="assets/montserrat.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="home.css?v=11">
+<script>
+  document.documentElement.classList.add('js');
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('anim');
+</script>
 </head>
 <body>
-<header class="header">
-  <a class="brand" href="/"><img src="icon.png" alt="">PostBud</a>
-  <nav class="nav"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+
+<header class="nav">
+  <a class="brand" href="#top"><img src="/icon.png" alt="">PostBud</a>
+  <nav class="links">
+    <a href="#how">How it works</a>
+    <a href="#captions">Captions</a>
+    <a href="#pricing">Pricing</a>
+  </nav>
+  <a class="btn btn-sm" href="#get">Coming soon</a>
 </header>
-<main class="content">
-<section class="hero">
-  <img src="icon.png" alt="PostBud">
-  <h1>Film your day. Bud makes the video.</h1>
-  <p>Pick your clips. Bud cuts them into one video with captions, ready for TikTok, Reels and Shorts. Your original clips never leave your Photos.</p>
-  <span class="pill">Coming soon to the App Store</span>
+
+<main id="top">
+
+<!-- The camera roll collapses into one video as you scroll -->
+<section class="scene" id="scene">
+  <div class="scene-sticky">
+    <div class="scene-head">
+      <h1 class="cap" id="cap" aria-label="Film your day. Bud makes the video.">
+        <span class="w">Film</span> <span class="w">your</span> <span class="w">day.</span><br>
+        <span class="w">Bud</span> <span class="w">makes</span> <span class="nw"><span class="w">the</span> <span class="w end">video.</span></span>
+      </h1>
+      <p class="lede">Pick the clips you filmed today. Bud picks the cut, and your phone makes one captioned video, ready for TikTok, Reels and Shorts.</p>
+    </div>
+
+    <div class="stage" id="stage">
+      <img class="tile" src="assets/roll-1.jpg" alt="" style="--x:8;--y:30;--r:-7">
+      <img class="tile" src="assets/roll-3.jpg" alt="" style="--x:21;--y:74;--r:5">
+      <img class="tile" src="assets/roll-7.jpg" alt="" style="--x:31;--y:22;--r:-3">
+      <img class="tile" src="assets/roll-4.jpg" alt="" style="--x:40;--y:80;--r:-6">
+      <img class="tile" src="assets/roll-8.jpg" alt="" style="--x:50;--y:16;--r:2">
+      <img class="tile" src="assets/roll-5.jpg" alt="" style="--x:60;--y:78;--r:4">
+      <img class="tile" src="assets/roll-2.jpg" alt="" style="--x:69;--y:24;--r:6">
+      <img class="tile" src="assets/roll-9.jpg" alt="" style="--x:80;--y:72;--r:-4">
+      <img class="tile" src="assets/roll-6.jpg" alt="" style="--x:92;--y:32;--r:7">
+
+      <div class="clip" id="clip">
+        <video src="assets/cut.mp4" poster="assets/cut-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A finished PostBud video: a ferry ride on the East River with captions"></video>
+      </div>
+
+      <ul class="callouts" aria-label="What is in a PostBud video">
+        <li class="co l" style="--t:16%">Captions on every word you say</li>
+        <li class="co l" style="--t:50%">Dead air, filler and repeated takes: out</li>
+        <li class="co l" style="--t:84%">Made on your phone, saved to Photos</li>
+        <li class="co r" style="--t:30%">The moments Bud picks, in Bud's order or yours</li>
+        <li class="co r" style="--t:68%">Your voiceover on top, if you want one</li>
+      </ul>
+    </div>
+  </div>
 </section>
-<section class="three">
-  <div class="card"><h3>Bud's cut</h3><p>Bud watches everything you filmed and tells the story, with captions on every video.</p></div>
-  <div class="card"><h3>My order</h3><p>Every clip, in the order you choose. Bud only takes out dead air, filler and repeated takes.</p></div>
-  <div class="card"><h3>You stay in charge</h3><p>Move, split or take out any part, fix a caption, add a voiceover, and build again.</p></div>
+
+<section class="after-scene">
+  <div class="wrap">
+    <ul class="co-list">
+      <li>Captions on every word you say</li>
+      <li>The moments Bud picks, in Bud's order or yours</li>
+      <li>Dead air, filler and repeated takes: out</li>
+      <li>Your voiceover on top, if you want one</li>
+      <li>Made on your phone, saved to Photos</li>
+    </ul>
+    <div class="actions">
+      <a class="btn" href="#get"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3 0 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.2 3-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4zM13.9 5.2c.7-.8 1.1-1.9 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>Coming soon to the App Store</a>
+      <span class="free">Your first 3 videos are free.</span>
+    </div>
+  </div>
 </section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <h2 class="cap reveal">Pick. Put it away. <span class="hl">Build.</span></h2>
+    <ol class="track" id="track">
+      <li class="seg reveal">
+        <img class="shot" src="assets/home.jpg" alt="PostBud home screen with the Pick today's clips button" loading="lazy">
+        <span class="mark">01</span>
+        <h3>Pick today's clips</h3>
+        <p>Open PostBud, tap Pick today's clips, and choose the ones you want in the video.</p>
+      </li>
+      <li class="seg reveal">
+        <img class="shot" src="assets/choosing.jpg" alt="The clips grid while Bud is choosing the cut, with the note: you can leave, Bud will ping you" loading="lazy">
+        <span class="mark">02</span>
+        <h3>Put your phone away</h3>
+        <p>Your phone preps the clips in the background while Bud picks the cut. Bud pings you when it is ready.</p>
+      </li>
+      <li class="seg reveal">
+        <img class="shot" src="assets/cutready.jpg" alt="The Cut ready screen with the Build the video button" loading="lazy">
+        <span class="mark">03</span>
+        <h3>Tap Build</h3>
+        <p>Your phone makes the video and saves it to Photos. Post it on TikTok, Reels or Shorts yourself.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="ways">
+  <div class="wrap">
+    <h2 class="cap reveal">Two ways to <span class="hl">cut.</span></h2>
+    <div class="halves">
+      <div class="half half-bud reveal">
+        <img src="assets/bud-idle.png" alt="">
+        <span class="tag">Bud picks</span>
+        <h3>Bud's cut</h3>
+        <p>Bud picks the moments and the order. For the day you want told as a story: the trip, the show, the night out.</p>
+      </div>
+      <span class="or" aria-hidden="true">or</span>
+      <div class="half half-order reveal">
+        <img src="assets/bud-idle.png" alt="">
+        <span class="tag">You set the order</span>
+        <h3>My order</h3>
+        <p>Every clip stays, in your order. Bud only takes out the dead air, the filler and the repeated takes. For the road trip you want told exactly how it happened.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="captions">
+  <div class="wrap paper-in">
+    <div class="demo reveal">
+      <div class="demo-frame">
+        <img src="assets/fix-frame.jpg" alt="A still from the ferry ride" loading="lazy">
+        <p class="demo-cap">Shout out <span class="word"><span class="flag" id="flag">Misheard</span><button type="button" class="mis" id="mis" aria-label="Misheard caption word: empty A. Double tap to see it fixed.">empty A</button></span></p>
+      </div>
+      <p class="demo-note" id="note" aria-live="polite">&nbsp;</p>
+    </div>
+    <div class="paper-copy reveal">
+      <h2 class="cap">Captions on every word <span class="hl">you say.</span></h2>
+      <p>The venue music, the announcements and the people next to you stay out of it.</p>
+      <dl class="feats">
+        <dt>Fix a misheard word</dt><dd>Caption got a friend's name wrong? Tap it and fix it, in one spot or everywhere it appears.</dd>
+        <dt>Two styles</dt><dd>Classic or Plain white. Or turn them off.</dd>
+        <dt>You stay in charge</dt><dd>If a part runs long, nudge it or take it out, then build again.</dd>
+        <dt>Add a voiceover</dt><dd>Record yourself over the finished video, on the couch that night or on the train home.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="private" id="privacy">
+  <div class="wrap">
+    <h2 class="cap reveal">What leaves your phone, and what <span class="hl">doesn't.</span></h2>
+    <div class="pv reveal">
+      <div class="pv-col pv-stay">
+        <h3>Stays on your phone</h3>
+        <ul>
+          <li><strong>Your original clips.</strong> They stay in your Photos library.</li>
+          <li><strong>The finished video.</strong> Your phone makes it and saves it to Photos. We never receive it.</li>
+        </ul>
+      </div>
+      <div class="pv-col pv-sent">
+        <h3>Sent so Bud can pick the cut</h3>
+        <ul>
+          <li><strong>A small, low-resolution preview</strong> of each clip you pick, its audio, and one still image.</li>
+          <li>AI services use these to transcribe what you said and choose the cut.</li>
+          <li>Delete a video and its files are removed from our servers.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pv-foot reveal">The <a href="/privacy.html">Privacy Policy</a> lists every service and how long files are kept.</p>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <h2 class="cap reveal">Your first 3 videos are <span class="hl">free.</span></h2>
+    <p class="sub reveal">A plan counts videos. Recut and edit a video as much as you like; it still only counts once.</p>
+    <div class="rows reveal">
+      <div class="row">
+        <span class="r-name">Free</span>
+        <ul class="r-what"><li>3 videos to try</li><li>Up to 30 minutes of clips in total</li><li>Captions on every video</li></ul>
+        <span class="r-price">$0</span>
+      </div>
+      <div class="row">
+        <span class="r-name">Standard</span>
+        <ul class="r-what"><li>100 videos a month</li><li>Up to 60 minutes of clips a day</li><li>Captions on every video</li><li>Bud's best editor</li><li>No PostBud end-tag</li></ul>
+        <span class="r-price">$12.99<small>a month, or $99.99 a year <span class="nw">(4 months free)</span></small></span>
+      </div>
+      <div class="row">
+        <span class="r-name">Plus</span>
+        <ul class="r-what"><li>300 videos a month</li><li>Up to 120 minutes of clips a day</li><li>Captions on every video</li><li>Bud's best editor</li><li>No PostBud end-tag</li></ul>
+        <span class="r-price">$24.99<small>a month, or $189.99 a year <span class="nw">(4 months free)</span></small></span>
+      </div>
+    </div>
+    <p class="every reveal">A video counts when you start its cut, not when you pick clips. Daily minutes reset at midnight where you are.</p>
+    <p class="fine">Fair use: up to 400 minutes of clips a month on Standard, 800 on Plus. Subscriptions are billed by Apple and managed in Settings. See the <a href="/terms.html">Terms of Use</a>.</p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2 class="cap reveal">Good to <span class="hl">know.</span></h2>
+    <div class="qa">
+      <div class="reveal"><h3>Does PostBud post for me?</h3><p>No. Your phone saves the finished video to Photos, and you post it on TikTok, Reels or Shorts yourself, with whatever caption you like.</p></div>
+      <div class="reveal"><h3>What does it run on?</h3><p>iPhone and iPad.</p></div>
+      <div class="reveal"><h3>Do my clips leave my phone?</h3><p>Your originals never do. PostBud sends a small, low-resolution preview, the audio and a still image of each clip you pick so Bud can choose the cut. The <a href="/privacy.html">Privacy Policy</a> has the details.</p></div>
+      <div class="reveal"><h3>What counts as a video?</h3><p>A video counts when you start its cut, not when you pick clips. Cutting it again, editing the parts, fixing captions and adding a voiceover do not use another one.</p></div>
+      <div class="reveal"><h3>Can I change what Bud picked?</h3><p>Yes. Move, split or take out any part, fix a caption, add a voiceover, and build again.</p></div>
+      <div class="reveal"><h3>When can I get it?</h3><p>PostBud is coming soon to the App Store. Follow <a href="https://www.tiktok.com/@postbud.app">@postbud.app</a> to hear the day it is out.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="get">
+  <div class="wrap reveal">
+    <img class="final-bud" src="assets/bud-wave-big.png" alt="Bud waving">
+    <h2 class="cap">Your day is already <span class="hl">filmed.</span></h2>
+    <p>PostBud is coming soon to the App Store. Your first 3 videos are free.</p>
+    <div class="actions center">
+      <a class="btn" href="https://www.tiktok.com/@postbud.app">Follow on TikTok</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/postbud.app">Follow on Instagram</a>
+    </div>
+  </div>
+</section>
+
 </main>
+
 <footer class="footer">
-  <div>&copy; 2026 AI Daily Dose LLC. PostBud is a product of AI Daily Dose LLC.</div>
-  <div style="margin-top:.5rem"><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="#top"><img src="/icon.png" alt="">PostBud</a>
+      <p>A product of AI Daily Dose LLC.<br><a href="mailto:admin@useaidailydose.com">admin@useaidailydose.com</a></p>
+    </div>
+    <nav>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="https://www.tiktok.com/@postbud.app">TikTok</a>
+      <a href="https://www.instagram.com/postbud.app">Instagram</a>
+    </nav>
+  </div>
+  <p class="copy">&copy; 2026 AI Daily Dose LLC.</p>
 </footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+  function ease(t) { return t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+
+  // Headline lands word by word, like a PostBud caption
+  var words = document.querySelectorAll('#cap .w');
+  if (anim) {
+    var i = 0;
+    var tick = setInterval(function () {
+      if (i > 0) words[i - 1].classList.remove('now');
+      if (i >= words.length) { clearInterval(tick); document.getElementById('cap').classList.add('done'); return; }
+      words[i].classList.add('said', 'now');
+      i++;
+    }, 260);
+  } else {
+    document.getElementById('cap').classList.add('done');
+  }
+
+  // Scroll scene: the camera roll collapses into the finished video
+  var scene = document.getElementById('scene');
+  var stage = document.getElementById('stage');
+  var tiles = stage.querySelectorAll('.tile');
+  var clip = document.getElementById('clip');
+  var cos = stage.querySelectorAll('.co');
+
+  function frame() {
+    var vh = window.innerHeight;
+    if (anim) {
+      var r = scene.getBoundingClientRect();
+      var p = clamp(-r.top / (r.height - vh));
+      var W = stage.clientWidth, H = stage.clientHeight;
+      var e = ease(clamp(p / .5));
+      var fade = 1 - clamp((p - .32) / .2);
+      tiles.forEach(function (t) {
+        var s = t.style;
+        var x = parseFloat(s.getPropertyValue('--x')) / 100 * W;
+        var y = parseFloat(s.getPropertyValue('--y')) / 100 * H;
+        var rot = parseFloat(s.getPropertyValue('--r'));
+        t.style.transform = 'translate(' + (x + (W / 2 - x) * e) + 'px,' + (y + (H / 2 - y) * e) + 'px) translate(-50%,-50%) rotate(' + rot * (1 - e) + 'deg) scale(' + (1 - .35 * e) + ')';
+        t.style.opacity = fade;
+      });
+      var c = clamp((p - .3) / .3);
+      clip.style.opacity = c;
+      clip.style.transform = 'translate(-50%,-50%) scale(' + (.72 + .28 * ease(c)) + ')';
+      cos.forEach(function (el, k) {
+        var a = clamp((p - .6 - k * .06) / .12);
+        el.style.opacity = a;
+        el.style.setProperty('--d', (1 - a) * 14 + 'px');
+      });
+    }
+  }
+  var queued = false;
+  function onScroll() { if (!queued) { queued = true; requestAnimationFrame(function () { queued = false; frame(); }); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  frame();
+
+  // Caption demo: a misheard word gets fixed, on a loop while it is on screen
+  var mis = document.getElementById('mis'), note = document.getElementById('note');
+  var flag = document.getElementById('flag');
+  var timers = [], looping = false;
+  function later(ms, fn) { timers.push(setTimeout(fn, ms)); }
+  function stop() { timers.forEach(clearTimeout); timers = []; }
+  function type(t) { mis.innerHTML = t + '<i class="caret"></i>'; }
+  function state(fixed) {
+    mis.textContent = fixed ? 'MTA' : 'empty A';
+    mis.classList.toggle('fixed', fixed);
+    flag.textContent = fixed ? 'Fixed' : 'Misheard';
+    flag.classList.toggle('ok', fixed);
+    flag.classList.remove('gone');
+    mis.classList.remove('tap', 'strike', 'typing');
+    note.textContent = fixed ? 'Fixed everywhere those words appear.' : '\u00a0';
+  }
+  function run() {
+    stop(); state(false);
+    later(1300, function () { mis.classList.add('tap'); });
+    later(1560, function () { mis.classList.remove('tap'); void mis.offsetWidth; mis.classList.add('tap'); });
+    later(1950, function () { mis.classList.add('strike'); flag.classList.add('gone'); });
+    later(2500, function () { mis.classList.remove('strike'); mis.classList.add('typing'); type(''); });
+    later(2750, function () { type('M'); });
+    later(2920, function () { type('MT'); });
+    later(3090, function () { type('MTA'); });
+    later(3600, function () { state(true); });
+    later(7600, function () { if (looping) run(); });
+  }
+  if (anim && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { looping = e.isIntersecting; if (looping) run(); else { stop(); state(false); } });
+    }, { threshold: .5 }).observe(mis.closest('.demo-frame'));
+    mis.addEventListener('click', run);
+  } else {
+    mis.addEventListener('click', function () { state(!mis.classList.contains('fixed')); });
+  }
+
+  // Bud hops once when the two cut cards appear, and again on hover
+  if (anim) {
+    document.querySelectorAll('.half').forEach(function (card, k) {
+      var bud = card.querySelector('img');
+      function hop() { if (!bud.classList.contains('hop')) bud.classList.add('hop'); }
+      bud.addEventListener('animationend', function () { bud.classList.remove('hop'); });
+      card.addEventListener('mouseenter', hop);
+      if ('IntersectionObserver' in window) {
+        var seen = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) { seen.disconnect(); setTimeout(hop, 500 + k * 300); }
+        }, { threshold: .6 });
+        seen.observe(card);
+      }
+    });
+  }
+
+  // Fade sections in
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
 </body>
 </html>
