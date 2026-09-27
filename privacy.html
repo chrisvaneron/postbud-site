@@ -15,7 +15,7 @@
 </header>
 <main class="content">
 <h1>Privacy Policy</h1>
-<p class="updated">Effective September 21, 2026</p>
+<p class="updated">Effective September 21, 2026. Updated September 27, 2026.</p>
 <p>PostBud is an iPhone and iPad app that turns the video clips you pick into one finished video. It is made and operated by <strong>AI Daily Dose LLC</strong>, a New York limited liability company ("we", "us"). This policy says what PostBud collects, why, who helps us process it, how long we keep it, and the choices you have. Questions: <a href="mailto:admin@useaidailydose.com">admin@useaidailydose.com</a>.</p>
 
 <div class="card"><strong>The short version.</strong>
@@ -47,10 +47,10 @@
 <p>PostBud's cut is made with the help of third-party AI services. Before your first upload the app tells you this and asks for your agreement. These companies process data on our behalf, under their terms for business customers, to provide the service to you:</p>
 <table>
 <tr><th>Company</th><th>What they receive</th><th>Purpose</th></tr>
-<tr><td>Google (Gemini API)</td><td>The low-resolution preview video with its audio; transcripts</td><td>Understanding the footage and choosing the cut</td></tr>
+<tr><td>Google (Vertex AI and Cloud Storage)</td><td>The low-resolution preview video with its audio, which your device uploads straight to Google Cloud Storage; transcripts</td><td>Storing the preview while the cut is made; understanding the footage and choosing the cut</td></tr>
 <tr><td>ElevenLabs (speech to text)</td><td>Clip audio and voiceover audio</td><td>Transcribing speech for captions and editing</td></tr>
 <tr><td>Anthropic (Claude API)</td><td>Text such as transcripts and cut plans</td><td>Editing decisions made from text</td></tr>
-<tr><td>Cloudflare (R2 storage)</td><td>The uploaded previews, audio, stills, voiceovers and records</td><td>File storage</td></tr>
+<tr><td>Cloudflare (R2 storage)</td><td>The uploaded audio, stills, voiceovers and records</td><td>File storage</td></tr>
 <tr><td>Fly.io</td><td>Everything our servers handle</td><td>Hosting our servers</td></tr>
 <tr><td>Neon (database)</td><td>Account, job and billing records</td><td>Database hosting</td></tr>
 <tr><td>Apple</td><td>Sign in, purchases, notifications, device checks</td><td>Platform services</td></tr>
@@ -70,7 +70,8 @@
 
 <h2>4. How long we keep it</h2>
 <ul>
-<li>Uploaded previews, audio, stills and working files for a video: until you delete the video or your account. We may delete them automatically sooner, about 14 days after a video's last activity on the free plan and about 60 days on a paid plan. Clips uploaded to a video whose cut was never started may be deleted after about 48 hours.</li>
+<li>The low-resolution preview video: up to 7 days after it is uploaded, then deleted automatically; sooner if you delete the video or your account, or when a newer preview of the same video replaces it. After that, a new cut of an older video asks your device to upload the preview again.</li>
+<li>Uploaded audio, stills and working files for a video: until you delete the video or your account. We may delete them automatically sooner, about 14 days after a video's last activity on the free plan and about 60 days on a paid plan. Clips uploaded to a video whose cut was never started may be deleted after about 48 hours.</li>
 <li>The cut plan, transcript and edit history of a video: up to about one year, or until you delete the video or your account.</li>
 <li>Account and purchase records: while your account exists. Records we must keep for tax, accounting or legal reasons are kept as long as the law requires.</li>
 <li>Diagnostic logs: only as long as we need them to fix problems and keep the service secure, and no longer than your account exists.</li>
