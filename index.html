@@ -284,9 +284,12 @@
       var W = stage.clientWidth, H = stage.clientHeight;
       var e = ease(clamp(p / .5));
       var fade = 1 - clamp((p - .32) / .2);
+      // On a phone the outer tiles would start half off screen: squeeze the spread
+      // so every tile's edge (rotation included) starts inside the page.
+      var pad = W < 700 ? tiles[0].offsetWidth * .6 + 10 : 0;
       tiles.forEach(function (t) {
         var s = t.style;
-        var x = parseFloat(s.getPropertyValue('--x')) / 100 * W;
+        var x = pad + parseFloat(s.getPropertyValue('--x')) / 100 * (W - 2 * pad);
         var y = parseFloat(s.getPropertyValue('--y')) / 100 * H;
         var rot = parseFloat(s.getPropertyValue('--r'));
         t.style.transform = 'translate(' + (x + (W / 2 - x) * e) + 'px,' + (y + (H / 2 - y) * e) + 'px) translate(-50%,-50%) rotate(' + rot * (1 - e) + 'deg) scale(' + (1 - .35 * e) + ')';
