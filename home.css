@@ -1,4 +1,4 @@
-@font-face { font-family: "Montserrat"; src: url("assets/montserrat.woff") format("woff"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("assets/montserrat.woff2") format("woff2"), url("assets/montserrat.woff") format("woff"); font-weight: 100 900; font-display: swap; }
 
 :root {
   --bg: #101216; --bg-2: #0B0C0F; --surface: #1A1D22; --line: #2A2F37;
