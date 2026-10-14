@@ -12,13 +12,13 @@ for html in *.html; do
     grep -v '^mailto:' | \
     grep -v '^/$' | \
     sed 's/?.*//' | \
-    while IFS= read -r ref; do
+    { fail=0; while IFS= read -r ref; do
       resolved="${ref#/}"
       if [ -z "$resolved" ] || [ ! -f "$resolved" ]; then
         echo "BROKEN: ${html} references ${ref} (not found)"
-        exit 1
+        fail=1
       fi
-    done || status=1
+    done; exit "$fail"; } || status=1
 done
 
 if [ "$status" -eq 0 ]; then
