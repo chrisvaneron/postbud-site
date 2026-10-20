@@ -136,7 +136,7 @@ html:not(.anim) .tile { display: none; }
 .caret { display: inline-block; width: 3px; height: .95em; margin-left: 2px; vertical-align: -.1em; background: #fff; box-shadow: 0 0 0 1.5px #000; animation: blink .8s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 .mis.strike { text-decoration: line-through; text-decoration-color: var(--amber); text-decoration-thickness: 4px; opacity: .7; transition: opacity .3s ease; }
-@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: .5; } }
+
 .demo-note { margin-top: 16px; font-weight: 700; color: #2672A8 !important; min-height: 1.6em; }
 .paper-copy .cap { font-size: clamp(2rem, 4vw, 3.2rem); }
 .paper-copy > p { font-size: 1.1rem; margin-top: 18px; }
